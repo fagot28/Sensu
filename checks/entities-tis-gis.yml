@@ -1,0 +1,23 @@
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: tis-gis1
+  namespace: default
+  labels:
+    proxy_type: website
+    url: https://gis1.hmao.ugra:6443/arcgis/rest/
+spec:
+  entity_class: proxy
+
+---
+type: Entity
+api_version: core/v2
+metadata:
+  name: tis-gis2
+  namespace: default
+  labels:
+    proxy_type: website
+    url: https://gis2.hmao.ugra:6443/arcgis/rest/
+spec:
+  entity_class: proxy

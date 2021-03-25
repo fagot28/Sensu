@@ -1,0 +1,21 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: check-tis-gis
+  namespace: default
+spec:
+  command: check-http.rb -k -t 1 -u {{ .labels.url }}
+  interval: 60
+  handlers:
+  - slack
+  proxy_requests:
+    entity_attributes:
+    - entity.entity_class == 'proxy'
+    - entity.labels.proxy_type == 'website'
+  publish: true
+  runtime_assets:
+  - sensu-plugins-http
+  - sensu-ruby-runtime
+  subscriptions:
+  - proxy

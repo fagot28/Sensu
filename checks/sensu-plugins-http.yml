@@ -1,0 +1,55 @@
+---
+type: Asset
+api_version: core/v2
+metadata:
+  name: sensu-plugins-http
+  labels: 
+  annotations:
+    io.sensu.bonsai.url: https://bonsai.sensu.io/assets/sensu-plugins/sensu-plugins-http
+    io.sensu.bonsai.api_url: https://bonsai.sensu.io/api/v1/assets/sensu-plugins/sensu-plugins-http
+    io.sensu.bonsai.tier: Community
+    io.sensu.bonsai.version: 6.0.0
+    io.sensu.bonsai.namespace: sensu-plugins
+    io.sensu.bonsai.name: sensu-plugins-http
+    io.sensu.bonsai.tags: alpine, centos, debian, http, ruby-runtime-2.4.4
+spec:
+  builds:
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_debian9_linux_amd64.tar.gz
+    sha512: ed9c3c8f1fbc37f9c856498ee77d93e2cd045993786a3b59ee76e240aa799f98dd1313672adb6ffd81a131103d401351d4434b4ea95fb40cd5cd40c8afa1ac29
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform_family == 'debian'  
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_debian_linux_amd64.tar.gz
+    sha512: bfa025fcda806a36673e252f693635ea9283f7ba9e1ddcfa3c541fdf7ab96e6d90746e44e3377b7d973cdc7cb3c851114ce886fd9d8ec532d7371b7a3f237fa2
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform_family == 'debian'
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_centos7_linux_amd64.tar.gz
+    sha512: eb4cb5aee521500c0580111814d909ec8ccda1a13c301578e614e932dc5420fdcd1b7da129a0d801440e433c51eb2fb7aa69df16bfaf6cdbb1ac20ed032d2063
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform_family == 'rhel'
+    - entity.system.platform_version.split('.')[0] == '7'
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_centos6_linux_amd64.tar.gz
+    sha512: 3f02ba8afd866ec68b50c8336263a10bd43fd29e4fb747e802bf816b11d94569e3005e808c85e9722258f67004812be367a51765095c7573e6ac91645ae02828
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform_family == 'rhel'
+    - entity.system.platform_version.split('.')[0] == '6'
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_alpine3.8_linux_amd64.tar.gz
+    sha512: 5ce520574a8460c9bdbfe5ee0cba7dd32d58bbfe51d09803d54f61f862520dfe654a2afce4d2da9553099dc8b674dae49b722dc6725ac5f3c2e7b64aec354370
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform == 'alpine'
+  - url: https://assets.bonsai.sensu.io/33783747d3af1939808944c2253c262d9d5b3fb7/sensu-plugins-http_6.0.0_alpine_linux_amd64.tar.gz
+    sha512: 619b32224c5d13f01360df42cb74db1118eab6b46833a93a6da2005638e955b839567ad19147bf9bfa9154bc75f60fc05645e212e75a22430b472a50eb90b655
+    filters:
+    - entity.system.os == 'linux'
+    - entity.system.arch == 'amd64'
+    - entity.system.platform == 'alpine'
+    - entity.system.platform_version.split('.')[0] == '3'
