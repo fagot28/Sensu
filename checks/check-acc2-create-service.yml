@@ -1,0 +1,19 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+  name: check-acc2-create-service
+  namespace: default
+spec:
+  command: check-http.rb -u http://unomfly.hmao.ugra:7070/acc2-create-service/
+  interval: 60
+  handlers:
+  - slack
+  proxy_entity_name: sensu-site
+  publish: true
+  round_robin: true
+  runtime_assets:
+  - sensu-plugins-http
+  - sensu-ruby-runtime
+  subscriptions:
+  - proxy
