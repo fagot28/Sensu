@@ -1,0 +1,16 @@
+---
+- name: Install, configure and run Sensu agents
+  hosts: agents
+  become: true
+  vars_files:
+    - ./group_vars/vars.yml
+  tasks:
+    - name: Install agent
+      include_role:
+        name: sensu.sensu_go.agent
+      vars:
+        version: 6.2.5
+        agent_config:
+          name: "{{ ansible_hostname }}"
+          keepalive-interval: 5
+          keepalive-timeout: 10
