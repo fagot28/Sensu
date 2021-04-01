@@ -11,6 +11,7 @@
       vars:
         version: 6.2.5
         agent_config:
+          backend-url: [ "ws://10.40.225.130:8381" ]
           name: "{{ ansible_hostname }}"
           keepalive-interval: 5
           keepalive-timeout: 10
