@@ -1,0 +1,23 @@
+---
+type: CheckConfig
+api_version: core/v2
+metadata:
+    name: check-chrony
+    namespace: default
+    labels: null
+    annotations: null
+spec:
+  check_hooks: null
+  command: check-chrony.rb
+  env_vars: null
+  handlers:
+  - slack
+  interval: 60
+  publish: true
+  round_robin: false
+  runtime_assets:
+  - sensu-plugins-chrony
+  - sensu-ruby-runtime
+  subscriptions:
+  - chrony
+
